@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    <script>
+
+        const user = localStorage.getItem('userId');
+
+        let path = window.location.pathname;
+
+        let loc = path.replace("/load-location/", "")
+
+        window.location.href = `/location/${loc}/${user}`;
+
+    </script>
+
+{% endblock %}

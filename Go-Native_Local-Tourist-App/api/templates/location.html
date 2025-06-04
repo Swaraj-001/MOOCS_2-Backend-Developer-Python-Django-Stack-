@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block styleLink %}
+
+<link rel="stylesheet" href="/static/css/Location.css">
+
+{% endblock %}
+
+{% block content %}
+
+{% include "navbar.html" %}
+
+{% if success %}
+
+<script>
+    alert("Image added successfully!!")
+
+    window.location.href = '/load-location/{{locId}}'
+</script>
+
+{% endif %}
+
+
+{% if error %}
+<script>
+  alert("Please try later!!")
+
+  window.reload()
+</script>
+{% endif %}
+
+<div  class='LocationPage GenPagePadding'>
+    <h3>{{monument.title}}</h3>
+    <img class='location_banner_img' src="{{monument.bannerImage}}" alt="" />
+    <p class='location_description'>{{monument.description}}</p>
+    <div class='address_span_2' >
+        <span>
+          <b>City</b>
+          <p>{{monument.city}}</p>
+        </span>
+        <span>
+          <b>Address</b>
+          <p>{{monument.address}}</p>
+        </span>
+    </div>
+    <span>
+      <b>Things you should know!!</b>
+      <p>{{monument.otherThings}}</p>
+    </span>
+    <span>
+      <b>Main Contributor</b>
+      <p>{{monument.contributor}}</p>
+    </span>
+    <h4>More images of this monuments...</h4>
+
+        <form method="post" class="add_new_image_container">
+          {% csrf_token %}
+          <div class="form-floating mb-3">
+            {{form.image}}
+            <label for="floatingTextarea2">Add new image</label>
+          </div>
+          <span>
+            <button type="submit" variant="success" >Upload</button>
+          </span>
+        </form>
+    
+    
+    
+      
+      <div class="location_more_images">
+          {% for img in monument.images %}
+            <img src="{{img}}" alt="" />
+          {% endfor %}
+      </div>
+    
+    
+    {% if monumentImgsLen == 0 %}
+    
+      <p>No images available</p>
+
+    {% endif %}
+    
+    
+  </div>
+
+  {% include "Footer.html" %}
+
+
+{% endblock %}

@@ -1,0 +1,93 @@
+.Navbar {
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3rem;
+
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    background: #004080; /* Changed to solid dark blue background */
+
+
+    font-family: 'Roboto', sans-serif; /* Changed to a more attractive font */
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; /* Add a subtle box shadow */
+
+
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    border-bottom: 2px solid #FFD700; /* Add a golden border at the bottom */
+}
+
+
+.Navbar h3 {
+    font-family: 'Roboto', sans-serif; /* Changed to a more attractive font */
+    color: aliceblue;
+    cursor: pointer;
+    margin: 0;
+}
+
+.Navbar a {
+    font-family: 'Roboto', sans-serif; /* Changed to a more attractive font */
+    text-decoration: none;
+    color: aliceblue; /* Default link color */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for link color and transform */
+    font-size: 1.1rem; /* Increased font size */
+}
+
+.Navbar a:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+
+.Navbar a:hover {
+    color: #FFD700; /* Change color on hover */
+    text-shadow: 0 0 5px #FFD700; /* Add glow effect on hover */
+}
+
+.nav_options {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Removed empty rulesets for .nav_search, .nav_search input:focus, and .nav_search:hover input */
+
+.nav_search input {
+    background-color: rgba(240, 248, 255, 0);
+    border: none;
+    border-bottom: 1.5px solid aliceblue;
+    color: rgba(240, 248, 255, 0.913);
+}
+
+.nav_search_icon {
+    font-size: 1.2rem;
+}
+
+/* Removed empty ruleset for .nav_options p */
+
+.nav_options p {
+    margin: 0;
+    color: rgba(240, 248, 255, 0.913);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav_options p:hover {
+    color: aliceblue;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Navbar {
+        flex-direction: column; /* Stack items vertically on small screens */
+        height: auto; /* Allow height to adjust */
+    }
+    .nav_options {
+        flex-direction: column; /* Stack nav options vertically */
+        gap: 10px; /* Reduce gap */
+    }
+}

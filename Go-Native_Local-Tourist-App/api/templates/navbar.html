@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block styleLink %}
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/navbar.css">
+{% endblock %}
+
+{% block content %}
+
+<nav class='Navbar'>
+    <a href='/'><img src="{% static 'img/gonativelogo.png' %}" alt="GoNative Logo" style="width: 100px; height: auto;" /></a>
+
+    <div class="nav_options">
+        <ul style="display: flex; gap: 20px;">
+            <li><a href='/' style="color: white;"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href='/search' style="color: white;"><i class="fas fa-search"></i> Search</a></li>
+        </ul>
+    </div>
+</nav>
+
+{% endblock %}

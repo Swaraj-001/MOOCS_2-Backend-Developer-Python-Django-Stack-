@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block styleLink %}
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/Landing.css' %}">
+{% endblock %}
+
+{% block content %}
+{% include "navbar.html" %}
+
+<div class='HomePage GenPagePadding' >
+    <div class="home_banner" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <h1 class="home_banner_title" style="font-size: 4em; text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7); color: #ffffff; background-color: rgba(0, 0, 0, 0.5); padding: 20px;">
+            Travel like a <span style="color: #FFD700;">Local</span>, cherish like a <span style="color: #FFD700;">Native</span>.
+        </h1>
+    </div>
+
+    <div class="popular_places_container">
+        <h2 class="popular_places_title">Popular Places</h2>
+    <div class="popular_places" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px;">
+        <a class="popular_place" href='#'>
+            <div class="image-card" style="border: 1px solid #ccc; border-radius: 5px; padding: 10px; text-align: center;">
+                <img src="{% static 'img/sadashivgad_fort.jpg' %}" alt="" style="width: 200px; height: 150px;" />
+                <h4>Sadashivgad Fort</h4>
+            </div>
+        </a>
+        <a class="popular_place" href='#'>
+            <div class="image-card" style="border: 1px solid #ccc; border-radius: 5px; padding: 10px; text-align: center;">
+                <img src="{% static 'img/vasantgad_fort.jpg' %}" alt="" style="width: 200px; height: 150px;" />
+                <h4>Vasantgad Fort</h4>
+            </div>
+        </a>
+        <a class="popular_place" href='#'>
+            <div class="image-card" style="border: 1px solid #ccc; border-radius: 5px; padding: 10px; text-align: center;">
+                <img src="{% static 'img/agashiv_caves.jpg' %}" alt="" style="width: 200px; height: 150px;" />
+                <h4>Agashiv Caves</h4>
+            </div>
+        </a>
+    </div>
+    </div>
+
+    <div class="trending_destinations_container">
+        <h2>Trending monuments</h2>
+        <div class="trending_destinations">
+            {% for monument in monuments %}
+            <a href="/load-location/{{monument.id}}">
+                <div class="trending_destination" >
+                    <img src="{% static 'img/'|add:monument.bannerImage %}" alt="" />
+                    <h4>{{monument.title}}</h4>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% include "Footer.html" %}
+{% endblock %}

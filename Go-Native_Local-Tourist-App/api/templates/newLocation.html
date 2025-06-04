@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block styleLink %}
+
+<link rel="stylesheet" href="/static/css/NewLocation.css">
+
+{% endblock %}
+
+{% block content %}
+
+{% include "navbar.html" %}
+
+{% if success %}
+
+<script>
+
+  alert("New Monument added successfully!!")
+  window.location.href = "/";
+
+</script>
+{% endif %}
+
+
+
+<div class='NewLocationPage GenPagePadding'>
+    <h2>Add new local monument</h2>
+    <form class="new_location_container" method="post">
+      {% csrf_token %}
+      <span>
+          <div class="form-floating mb-3">
+            {{form.title}}
+            <label for="floatingInput">Monument's title</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            {{form.bannerImg}}
+            <label for="floatingInput">Banner image</label>
+          </div>
+
+      </span>
+
+      <div class="form-floating mb-3">
+        {{form.description}}
+        <label for="floatingTextarea2">Describe the monument</label>
+      </div>
+
+      <span>
+
+          <div class="form-floating mb-3">
+            {{form.city}}
+            <label for="floatingInput">City name</label>
+          </div>
+          <div class="form-floating mb-3">
+            {{form.address}}
+            <label for="floatingInput">Monument's address</label>
+          </div>
+
+      </span>
+
+      <div class="form-floating mb-3">
+        {{form.otherThings}}
+        <label for="floatingTextarea2">Things one should must know about this location!!</label>
+      </div>
+
+      <button class='form_button btn btn-primary'type="submit" >Upload details</button>
+
+    </form>
+    
+  </div>
+
+
+{% include "Footer.html" %}
+
+{% endblock %}

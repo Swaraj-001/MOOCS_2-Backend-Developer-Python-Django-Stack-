@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    <script>
+
+        const user = localStorage.getItem('userId');
+
+        window.location.href = `/contributions/${user}`;
+
+    </script>
+
+{% endblock %}

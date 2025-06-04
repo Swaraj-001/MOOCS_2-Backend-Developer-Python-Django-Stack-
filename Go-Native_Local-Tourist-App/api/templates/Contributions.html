@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block styleLink %}
+
+<link rel="stylesheet" href="/static/css/Contributions.css">
+
+{% endblock %}
+
+{% block content %}
+
+{% include "navbar.html" %}
+
+<div class='ContributionsPage GenPagePadding'>
+    <h3>Hello, {{username}}..!</h3>
+
+      {% comment %} <h4>You've not made any contributions yet..</h4> {% endcomment %}
+     
+        <h4>You've made {{contriLen}} contributions till date..</h4>
+        <div class="contributions_body">
+
+            {% for contribution in contributions %}
+
+              <div class="contribution">
+                <h5>{{contribution.title}}</h5>
+                <span>
+                  <b>Contribution: </b>
+                  <p>{{contribution.contribution}}</p>            
+                </span>
+                <span>
+                  <b>City: </b>
+                  <p>{{contribution.city}}</p>
+                </span>
+                <span>
+                  <b>Address: </b>
+                  <p>{{contribution.address}}</p>
+                </span>
+                <span>
+                  <b>Date: </b>
+                  <p>{{contribution.date}}</p>
+                </span>
+              </div>
+
+            {% endfor %}
+          
+
+        </div>
+     
+
+  </div>
+
+  {% include "Footer.html" %}
+
+{% endblock %}

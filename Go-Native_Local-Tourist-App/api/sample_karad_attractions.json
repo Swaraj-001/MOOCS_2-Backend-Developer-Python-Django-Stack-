@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Pritisangam (Confluence of Krishna and Koyna Rivers)",
+    "location": "Karad",
+    "description": "Unique T-shaped confluence. Peaceful spot with a landscaped garden and a memorial of Yashwantrao Chavan.",
+    "image_url": "/static/img/pritisangam.jpg",
+    "category": "natural",
+    "distance_from_karad_km": 0
+  },
+  {
+    "name": "Krishna Ghat",
+    "location": "Karad",
+    "description": "Developed riverfront area with gardens and walkways. Great for evening walks and river views.",
+    "image_url": "/static/img/krishna_ghat.jpg",
+    "category": "natural",
+    "distance_from_karad_km": null
+  },
+  {
+    "name": "Devi Krishnamai Temple",
+    "location": "Karad",
+    "description": "Sacred temple near the Krishna River. Important spiritual hub for locals.",
+    "image_url": "/static/img/devi_krishnamai_temple.jpg",
+    "category": "religious",
+    "distance_from_karad_km": null
+  },
+  {
+    "name": "Naktya Ravlyachi Vihir (Ancient Stepwell)",
+    "location": "Karad",
+    "description": "Architecturally significant historic well. Symbol of ancient water management.",
+    "image_url": "/static/img/naktya_ravlyachi_vihir.jpg",
+    "category": "historical",
+    "distance_from_karad_km": null
+  },
+  {
+    "name": "Agashiv Caves",
+    "location": "Karad",
+    "description": "Ancient Buddhist rock-cut caves. Located on Agashiv Hill, approx. 4 km from the city center.",
+    "image_url": "/static/img/agashiv_caves.jpg",
+    "category": "historical",
+    "distance_from_karad_km": 4
+  },
+  {
+    "name": "Sadashivgad Fort",
+    "location": "Near Karad",
+    "description": "Built by Shivaji Maharaj. Offers panoramic views and houses an old Shiva temple.",
+    "image_url": "/static/img/sadashivgad_fort.jpg",
+    "category": "historical",
+    "distance_from_karad_km": 7
+  },
+  {
+    "name": "Vasantgad Fort",
+    "location": "Near Karad",
+    "description": "Near Talbid village (13 km from Karad). Known for its strategic importance during the Maratha period.",
+    "image_url": "/static/img/vasantgad_fort.jpg",
+    "category": "historical",
+    "distance_from_karad_km": 13
+  },
+  {
+    "name": "Koyna Dam",
+    "location": "Near Karad",
+    "description": "Major hydroelectric project. Scenic picnic spot surrounded by forested hills.",
+    "image_url": "/static/img/koyna_dam.jpg",
+    "category": "natural",
+    "distance_from_karad_km": 60
+  },
+  {
+    "name": "Mayani Bird Sanctuary",
+    "location": "Near Karad",
+    "description": "Birdwatching hotspot with migratory and native birds. Ideal during winter months.",
+    "image_url": "/static/img/mayani_bird_sanctuary.jpg",
+    "category": "wildlife",
+    "distance_from_karad_km": 52
+  },
+  {
+    "name": "Kaas Plateau (Kaas Pathar)",
+    "location": "Satara District",
+    "description": "UNESCO World Heritage site. Famed for monsoon wildflowers and unique biodiversity.",
+    "image_url": "/static/img/kaas_plateau.jpg",
+    "category": "natural",
+    "distance_from_karad_km": 74
+  },
+  {
+    "name": "Yashwantrao Chavan Samadhi & Museum",
+    "location": "Karad",
+    "description": "Memorial of Maharashtra’s first Chief Minister. Museum exhibits related to his political legacy.",
+    "image_url": "/static/img/yashwantrao_chavan_samadhi.jpg",
+    "category": "cultural",
+    "distance_from_karad_km": null
+  },
+  {
+    "name": "Talbid",
+    "location": "Near Karad",
+    "description": "Historical village linked with Shivaji Maharaj. Close to Vasantgad; offers insight into Maratha history.",
+    "image_url": "/static/img/talbid.jpg",
+    "category": "historical",
+    "distance_from_karad_km": null
+  }
+]

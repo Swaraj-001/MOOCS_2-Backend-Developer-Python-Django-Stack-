@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block styleLink %}
+
+<link rel="stylesheet" href="{% static 'css/Search.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+{% include "navbar.html" %}
+
+<div class='searchPage GenPagePadding' >
+    <div class="search_container">
+        <h3>What Interests You Today..?</h3>
+        
+        <form class="search_bar" method="post">
+            {% csrf_token %}
+            {{form.search}}
+            <button type="submit" >Search</button>
+        </form>
+    </div>
+
+    <div class="search_cities">
+        <div class="popular_cities_container">
+              <h2 class="popular_cities_title">Related Locations</h2>
+  
+                <div class="popular_cities">
+                    
+                    {% for monument in monuments %}
+                        
+                        <a href="/load-location/{{monument.id}}" class="popular_city" >
+                        <img src="{% static 'img/'|add:monument.bannerImage %}" alt="" />
+                        <h4>{{monument.title}}</h4>
+                        </a>
+                    
+                    {% endfor %}
+                  
+                </div>
+              
+              
+          </div>
+      </div>
+
+</div>
+
+{% include "Footer.html" %}
+
+
+{% endblock %}

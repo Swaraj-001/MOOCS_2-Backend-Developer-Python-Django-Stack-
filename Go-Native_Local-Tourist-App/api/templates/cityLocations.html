@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block styleLink %}
+
+<link rel="stylesheet" href="/static/css/CityLocations.css">
+
+{% endblock %}
+
+{% block content %}
+
+{% include "navbar.html" %}
+
+<div class='CityLocations GenPagePadding' >
+    <h3>Popular monuments in <span>{{city}}</span>...</h3>
+
+        {% comment %} <p>No monuments available</p> {% endcomment %}
+    
+        <div class='CityLocations__container'>
+                {% for monu in monuments %}
+                    <a href="/load-location/{{monu.id}}">
+                        <div class="city_location"   >
+                            <img src="{{monu.bannerImage}}" alt=''/>
+                            <h4>{{monu.title}}</h4>
+                            <p>{{monu.address}}</p>
+                        </div>
+                    </a>
+                {% endfor %}
+           
+        </div>
+    
+
+
+</div>
+
+{% include "Footer.html" %}
+
+{% endblock %}
